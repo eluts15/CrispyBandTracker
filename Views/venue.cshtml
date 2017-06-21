@@ -1,0 +1,32 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h2>Venue: @Model["venue"].GetName()</h2><br>
+<a href="/venues/delete/@Model["venue"].GetId()">Delete this venue?</a>
+<hr />
+
+@if (@Model["venueBands"].Count != 0)
+{
+  <h4>Here are all the bands playing at @Model["venue"].GetName()</h4>
+  <ul>
+    @foreach (var band in @Model["venueBands"])
+    {
+      <li>@band.GetName()</li>
+    }
+  </ul>
+}
+<h4>Add a band to this venue?</h4>
+<form action="/venue/add_band" method="post">
+  <input id="venue-id" name="venue-id" type="hidden" value='@Model["venue"].GetId()'>
+  <label for="band-id">Select a band</label>
+  <select id="band-id" name="band-id" type="text">
+    @foreach (var band in @Model["allBands"])
+    {
+      <option value='@band.GetId()'>@band.GetName()</option>
+    }
+  </select>
+  <button type="submit">Add Band</button>
+</form>
+
+<p><a href="/venues">Back To Venues</></p>

@@ -1,0 +1,25 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h2>Band: @Model["band"].GetName()</h2>
+<hr />
+
+@if (@Model["bandVenues"].Count == 0)
+{
+  <p>The is band is not currently touring.</p>
+}
+
+@if (@Model["bandVenues"].Count != 0)
+{
+  <h4>This band is playing at the following venues this month:</h4>
+  <ul>
+    @foreach (var venue in @Model["bandVenues"])
+    {
+      <li>@venue.GetName()</li>
+    }
+  </ul>
+}
+
+<p><a href="/bands">Back to Band List</a></p>
+<p><a href="/">Back To Home Page</a></p>

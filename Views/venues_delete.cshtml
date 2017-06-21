@@ -1,0 +1,14 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+<hr />
+
+<p>Warning: You are about to delete this venue.  Once this has been done there is no going back.
+Are you sure you want to do this?</p>
+
+<h3>Remove this Venue @Model.GetName()?</h3>
+
+<form action="/venues/delete/@Model.GetId()" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <button class="btn-primary" type="submit">DELETE</button>
+</form>

@@ -1,0 +1,28 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h1>Happy BandTracker</h1>
+<hr />
+
+
+
+@if (Model.Count == 0 || Model.Count > 0)
+{
+  <h3><a href="/venues/new">Add a venue </a></h3>
+}
+
+@if (Model.Count >= 1)
+{
+  <h2>Local Venues</h2>
+    <ul>
+      @foreach (var venue in Model)
+      {
+        <li><a href="/venues/@venue.GetId()">@venue.GetName()</a> | <a href="/venues/edit/@venue.GetId()">Edit this Venue</a> | <a href="/venues/delete/@venue.GetId()">Delete</a></li>
+      }
+    </ul>
+}
+
+
+
+<h4><a href="/">Return to Home Page</a></h4>

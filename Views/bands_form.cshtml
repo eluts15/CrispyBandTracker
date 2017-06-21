@@ -1,0 +1,14 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h3>Keep track of your favorite bands.</h3>
+<hr />
+
+<form action="/bands/new" method="post">
+  <label for="band-name">Band Name:</label>
+  <input id="band-name" name="band-name" type="text">
+  <button type="submit">Add new band</button>
+</form>
+
+<p><a href="/bands">View Saved Bands</a></p>

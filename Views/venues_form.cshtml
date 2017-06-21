@@ -1,0 +1,14 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h3>Add new Venue?</h3>
+<hr />
+
+<form action="/venues/new" method="post">
+  <label for="venue-name">Venue name:</label>
+  <input id="venue-name" name="venue-name" type="text">
+  <button type="submit">Add Venue</button>
+</form>
+
+<h4><a href="/">Return To Home Page</a></h4>
