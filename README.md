@@ -32,7 +32,7 @@ Lastly, Save and hit execute. Your server should now be up and running!
 
 ## Installation/Prerequisites
 
-Git Clone or Download at:
+Git Clone or Download at: https://github.com/eluts15/crispy-waddle-band-tracker.git
 
 In order to get server up and running, run the following command:
 
