@@ -4,15 +4,35 @@ Specification:
 
 | Behavior | Input | Output | Description of Specification |
 | :-------------     | :------------- | :------------- | :------------- |
-| 
+| Start with nothing in database to begin with.| | | Verify that there is nothing in the database as we don't want to mess anything up if the database is currently already in use. |
+| Has the ability to create Venues | "The House of Blues, San Diego" | The House of Blues San Diego | Add the name of the venue to the database. |
+| Has the ability to update the venues information in database. | "The House of Blues, San Diego" | The House of Blues Portland | Update an venue's existing information in the database. |
+| Can remove Specific venues | "The House of Blues, San Diego" | NULL | Simply deletes a venue and any bands associated with it.|
+| Has the ability to add bands to a specific venue | "Paramore" | Band: Paramore is playing at [The House of Blues, The Hollywood Bowl, etc..] | Add a band and show which venue(s) it is playing at.|
 
-# Server Setup
+## Server and Database Setup
+
+This application utitizes Microsoft SQL Server Management Studio.
+Connect to the server.
 
 
+To recreate the database from the schema open the file in SSMS(SQL Server Management Studio).
+Open the file, Scripts_test.sql and add the following lines of code to the top of the schema:
+
+
+Recreating from Schema:
+If there is currently no database create one with the command:
+
+CREATE DATABASE band_tracker_test
+Enter the command GO.
+
+This ends the statement, allowing sql to execute and allows the user to type in a new command.
+
+Lastly, Save and hit execute. Your server should now be up and running!
 
 ## Installation/Prerequisites
 
-Git Clone or Download at: https://github.com/eluts15/super-duper-lamp-band-tracker.git
+Git Clone or Download at:
 
 In order to get server up and running, run the following command:
 
