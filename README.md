@@ -60,7 +60,7 @@ Run dnu restore if necessary to update dependencies.
 
 ## Known Bugs
 
-1. There are probably a few..
+1. The user can try add add a band to a venue when no band has been created, this causes a 500 internal server error.
 
 ## License
 
